@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gl:Guideline
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:gl="https://www.archsec.de/models/guideline/1.0">
+  <rules description="This refers to the generation, distribution and storage of the cryptographic keys in the system. A compromise of a key means that every piece of information encrypted with this key is compromised. If there is no mechanism to replace a key or any auditing to aid in recovering, this can lead to serious compromise of the system."
+      id="Rule 06">
+    <patterns
+        target="Datastore"
+        id="Rule 06.01"
+        description="Determine where cryptographic keys are stored">
+      <checks
+          id="Rule 06.01.01"
+          description="Is the key stored securely?"/>
+    </patterns>
+  </rules>
+</gl:Guideline>

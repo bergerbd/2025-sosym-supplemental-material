@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<org.eclipse.emf.ecp.view.model:View xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:org.eclipse.emf.ecp.view.group.model="http://org/eclipse/emf/ecp/view/group/model" xmlns:org.eclipse.emf.ecp.view.horizontal.model="http://org/eclipse/emf/ecp/view/horizontal/model" xmlns:org.eclipse.emf.ecp.view.model="http://org/eclipse/emf/ecp/view/model/1180" xmlns:org.eclipse.emf.ecp.view.vertical.model="http://org/eclipse/emf/ecp/view/vertical/model" xmi:id="_9g3lwArhEe-tedgDsmDBxA" name="Rule">
+  <rootEClass href="https://www.archsec.de/models/guideline/1.0#//Rule"/>
+  <children xsi:type="org.eclipse.emf.ecp.view.vertical.model:VerticalLayout" xmi:id="_Lq1KEAriEe-tedgDsmDBxA">
+    <children xsi:type="org.eclipse.emf.ecp.view.group.model:Group" xmi:id="_XWW9EAriEe-tedgDsmDBxA" name="Rule details">
+      <children xsi:type="org.eclipse.emf.ecp.view.horizontal.model:HorizontalLayout" xmi:id="_SEzj4AriEe-tedgDsmDBxA">
+        <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_9g3lxQrhEe-tedgDsmDBxA" name="Control id">
+          <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_9g3lxgrhEe-tedgDsmDBxA">
+            <domainModelEFeature xsi:type="ecore:EAttribute" href="https://www.archsec.de/models/guideline/1.0#//Rule/id"/>
+          </domainModelReference>
+        </children>
+        <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_H0bgQAriEe-tedgDsmDBxA" name="Name">
+          <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_KeSecAriEe-tedgDsmDBxA">
+            <domainModelEFeature xsi:type="ecore:EAttribute" href="https://www.archsec.de/models/guideline/1.0#//Rule/name"/>
+          </domainModelReference>
+        </children>
+      </children>
+      <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_9g3lwQrhEe-tedgDsmDBxA" name="Control description">
+        <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_9g3lwgrhEe-tedgDsmDBxA">
+          <domainModelEFeature xsi:type="ecore:EAttribute" href="https://www.archsec.de/models/guideline/1.0#//Rule/description"/>
+        </domainModelReference>
+      </children>
+    </children>
+  </children>
+  <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_9g3lwwrhEe-tedgDsmDBxA" name="Control patterns">
+    <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_9g3lxArhEe-tedgDsmDBxA">
+      <domainModelEFeature xsi:type="ecore:EReference" href="https://www.archsec.de/models/guideline/1.0#//Rule/patterns"/>
+    </domainModelReference>
+  </children>
+  <ecorePaths>/de.archsec.interoperability.guideline/model/guideline.ecore</ecorePaths>
+</org.eclipse.emf.ecp.view.model:View>

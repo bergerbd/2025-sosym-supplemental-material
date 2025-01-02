@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<org.eclipse.emf.ecp.view.model:View xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:org.eclipse.emf.ecp.view.horizontal.model="http://org/eclipse/emf/ecp/view/horizontal/model" xmlns:org.eclipse.emf.ecp.view.model="http://org/eclipse/emf/ecp/view/model/1180" xmi:id="_U0WCYArZEe-tedgDsmDBxA" name="Guideline">
+  <rootEClass href="https://www.archsec.de/models/guideline/1.0#//Guideline"/>
+  <children xsi:type="org.eclipse.emf.ecp.view.horizontal.model:HorizontalLayout" xmi:id="_XI30UAraEe-tedgDsmDBxA">
+    <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_4inx0ArbEe-tedgDsmDBxA" name="Rules">
+      <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="__Etl0ArbEe-tedgDsmDBxA">
+        <domainModelEFeature xsi:type="ecore:EReference" href="https://www.archsec.de/models/guideline/1.0#//Guideline/rules"/>
+      </domainModelReference>
+    </children>
+  </children>
+  <ecorePaths>/de.archsec.interoperability.guideline/model/guideline.ecore</ecorePaths>
+</org.eclipse.emf.ecp.view.model:View>

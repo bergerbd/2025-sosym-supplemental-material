@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated guideline -->
+      <package
+            uri="https://www.archsec.de/models/guideline/1.0"
+            class="de.archsec.interoperability.guideline.Guideline.GuidelinePackage"
+            genModel="model/guideline.genmodel"/>
+   </extension>
+
+</plugin>

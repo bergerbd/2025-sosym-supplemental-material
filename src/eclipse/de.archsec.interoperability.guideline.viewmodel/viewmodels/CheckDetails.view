@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<org.eclipse.emf.ecp.view.model:View xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:org.eclipse.emf.ecp.view.model="http://org/eclipse/emf/ecp/view/model/1180" xmi:id="_GcF-4ArjEe-tedgDsmDBxA" name="Check">
+  <rootEClass href="https://www.archsec.de/models/guideline/1.0#//Check"/>
+  <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_GcGl8ArjEe-tedgDsmDBxA" name="Control id">
+    <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_GcGl8QrjEe-tedgDsmDBxA">
+      <domainModelEFeature xsi:type="ecore:EAttribute" href="https://www.archsec.de/models/guideline/1.0#//Check/id"/>
+    </domainModelReference>
+  </children>
+  <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_GcGl8grjEe-tedgDsmDBxA" name="Control description">
+    <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_GcGl8wrjEe-tedgDsmDBxA">
+      <domainModelEFeature xsi:type="ecore:EAttribute" href="https://www.archsec.de/models/guideline/1.0#//Check/description"/>
+    </domainModelReference>
+  </children>
+  <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_GcGl9ArjEe-tedgDsmDBxA" name="Control isAutomated">
+    <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_GcGl9QrjEe-tedgDsmDBxA">
+      <domainModelEFeature xsi:type="ecore:EAttribute" href="https://www.archsec.de/models/guideline/1.0#//Check/isAutomated"/>
+    </domainModelReference>
+  </children>
+  <ecorePaths>/de.archsec.interoperability.guideline/model/guideline.ecore</ecorePaths>
+</org.eclipse.emf.ecp.view.model:View>
