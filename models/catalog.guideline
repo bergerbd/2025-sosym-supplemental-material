@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gl:Guideline xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:gl="https://www.archsec.de/models/guideline/1.0" id="G1" name="Catalog of Design Flaws">
+  <rules id="G1.01" name="Missing Authentication" description="This refers to the absence of an authentication mechanism in the system. Apart from external entities, like users or other systems the system may interact with, authentication may be necessary within the system between processes/components/datastores that are located in different trust boundaries.">
+    <patterns id="G1.01.01" description="Determine external entities that interact with high-value assets in the system.">
+      <target>ExternalEntity</target>
+      <checks id="G1.01.01.01" description="Does the entity go through an authentication point in order to access the asset?s"/>
+    </patterns>
+    <patterns id="G1.01.2" description="Determine processes that interact with high-value assets in the system.">
+      <target>Process</target>
+      <checks id="G1.01.02.01" description="Is the identity of a process accessing datastores or processes in a different part of the system (trust boundaries – requires different privilege levels) verified?&#xA;"/>
+    </patterns>
+  </rules>
+  <rules id="G1.02" name="Authentication Bypass using an alternate path" description="This refers to the case where although there is an authentication mechanism in place, it does not cover all possible entry points to the system. This can be due to the fact that there is a remote access point to the system aiming towards support or maintenance, a possible backdoor. Additionally, a system may make a call to invoke functionality of an external application. In such case, the external application can have access to resources and data of the system if not contained properly.">
+    <patterns id="G1.02.01" description="Determine the entry points to the system.">
+      <target>Process</target>
+      <checks id="G1.02.01.01" description="Does it go through an authentication point?"/>
+      <checks id="G1.02.01.02" description="What kind of assets are accessible through this path? Are their security objectives still achieved?"/>
+      <checks id="G1.02.01.03" description="Is the system protected against MITM and session hijacking attacks? Are the communication channels used encrypted?"/>
+      <checks id="G1.02.01.04" description="Does the system invoke functionality from third party applications? Are these applications subject to proper access control (regarding the resources and data they have access to)?"/>
+    </patterns>
+  </rules>
+  <rules id="G1.03" name="Relying on Single Factor Authentication" description="Although single factor authentication schemes, like password, can be effcient and suffcient for many systems, using a multifactor authentication scheme is recommended if the system handles sensitive data or operations, like bank transactions. Even if a strong password management policy is in place, this can be obtained by malicious parties in several ways. For example, many users are used to typing their password whenever they are prompted, so they might accidentally input their password in a form induced by the attacker. Additionally, if the authentication is based on shared resources, like IP address or MAC, these can be easily spoofed or altered leaving the system vulnerable. Such resources can be effective if they are used as part of an authentication scheme, but not as the sole factor for authentication.">
+    <patterns id="G1.03.01" description="Determine processes that act as authentication points.">
+      <target>Process</target>
+      <checks id="G1.03.01.01" description="Does the used authentication factor provide sufficient level of security? Is it hard to brute-force, guess or forge it?"/>
+      <checks id="G1.03.01.02" description="Are there any known issues regarding the used authentication scheme? If yes, are these properly handled?"/>
+      <checks id="G1.03.01.03" description="Is the use of shared resources like IP address as a sole factor for authentication avoided?"/>
+      <checks id="G1.03.01.04" description="If the authentication scheme is password-based, is there a strong password management policy enforced?"/>
+      <checks id="G1.03.01.05" description="If the authentication scheme is password-based, is the password change management secure? How can the user change/reset credentials. Is he/she notified in such case?"/>
+    </patterns>
+  </rules>
+  <rules id="G1.04" name="Insufficient Session Management" description="Not managing a session properly throughout its lifecycle can leave the system vulnerable to session hijacking attacks. Session management involves creation (the session should be established through a secure channel and session identifier should be encrypted), the time frame the session is active (an attacker might attempt to reuse the session ID to gain access) and its destruction/invalidation (proper session invalidation should take place when the user logs out or session timeout. Not terminating sessions can also lead to resource depletion)."/>
+  <rules id="G1.06" name="Insufficient Cryptograhic Key Management" description="This refers to the generation, distribution and storage of the cryptographic keys in the system. A compromise of a key means that every piece of information encrypted with this key is compromised. If there is no mechanism to replace a key or any auditing to aid in recovering, this can lead to serious compromise of the system.">
+    <patterns id="G1.06.01" description="Determine where cryptographic keys are stored.">
+      <target>Datastore</target>
+      <checks id="G1.06.01.01" description="Is the key stored securely?"/>
+      <checks id="G1.06.01.02" description="Is it encrypted with Key Encryption Key (KEKs)?"/>
+      <checks id="G1.06.01.03" description="Is there a secure backup of the datastore that stores the keys?"/>
+      <checks id="G1.06.01.04" description="Is all access to the key in plaintext format logged?"/>
+    </patterns>
+    <patterns id="G1.06.02" description="Determine where cryptographic keys are created">
+      <checks id="G1.06.02.01" description="Is it generated within a cryptographic module isolated from the rest of the system?"/>
+      <checks id="G1.06.02.02" description="Does the Random Number Generator (RNG) comply with latest standards?"/>
+      <checks id="G1.06.02.03" description="Is the time the key is in plaintext format minimized?"/>
+      <checks id="G1.06.02.03" description="Is the access to it during that time restricted only to authorized&#xA;parties?"/>
+    </patterns>
+    <patterns id="G1.06.03" description="Determine where cryptographic keys are used">
+      <checks id="G1.06.03.01" description="Does the Random Number Generator (RNG) comply with latest standards?"/>
+      <checks id="G1.06.03.02" description="Is the time the key is in plaintext format minimized?"/>
+      <checks id="G1.06.03.03" description="Is the access to it during that time restricted only to authorized&#xA;parties?"/>
+      <checks id="G1.06.03.04" description="Is the key used only by processes within the cryptographic module?"/>
+    </patterns>
+    <patterns id="G1.06.04" description="Determine how cryptographic keys are distributed">
+      <target>InformationFlow</target>
+      <checks id="G1.06.04.01" description="Are the keys distributed through secure channels?"/>
+    </patterns>
+    <patterns id="G1.06.05" description="Identify the key replacement mechanism">
+      <checks id="G1.06.05.01" description="Are the keys distributed through secure channels?"/>
+    </patterns>
+  </rules>
+</gl:Guideline>
